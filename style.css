@@ -1,0 +1,42 @@
+--red: #E10600;          /* brand red */
+--black: #111111;        /* true black text */
+--deep: #FFFFFF;
+--text: #111111;
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover { opacity: 0.92; }
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(17,17,17,0.25);
+  color: var(--text);
+}
+
+.btn.ghost:hover {
+  background: rgba(17,17,17,0.03);
+}
+.services-list {
+  list-style: none;
+  margin-top: 14px;
+  padding-left: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.services-list li {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #FAFAFA;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-weight: 500;
+}
