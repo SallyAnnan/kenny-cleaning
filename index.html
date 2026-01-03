@@ -1,0 +1,169 @@
+<body>
+  <!-- LANGUAGE SWITCH (top-left) -->
+  <div class="lang-toggle">
+    <button id="lang-fr" class="lang-btn active">FR</button> |
+    <button id="lang-en" class="lang-btn">EN</button>
+  </div>
+
+  <!-- TOP NAV: search + appointment + mobile menu -->
+  <div class="top-nav">
+    <div class="nav-left">
+      <button class="hamburger" id="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-right">
+      <button class="icon-btn" id="search-toggle" aria-label="Search">🔍</button>
+
+      <a href="#booking" class="nav-appointment" data-i18n="navAppointment">
+        Prendre rendez-vous
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile slide-out menu -->
+  <nav class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <button class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="#services" data-i18n="navServices">Services</a></li>
+        <li><a href="#booking" data-i18n="navBooking">Réserver</a></li>
+        <li><a href="#why" data-i18n="navWhy">Pourquoi nous</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Search bar overlay -->
+  <div class="search-bar" id="search-bar">
+    <form id="site-search-form">
+      <input type="text" id="site-search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Rechercher sur le site..." autocomplete="off" />
+      <button type="submit" data-i18n="searchGo">Go</button>
+    </form>
+  </div>
+
+  <!-- HERO (Desktop) -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="logo">
+        <span class="logo-script">Kenny Cleaning</span>
+      </div>
+
+      <h1 data-i18n="heroHeadline">Nettoyage haut de gamme, résultats impeccables.</h1>
+      <p class="sub" data-i18n="heroSub">
+        Maison, bureaux, Airbnb — un service fiable, rapide et soigné.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn" href="#booking" data-i18n="ctaBook">Réserver</a>
+        <a class="btn ghost" href="#services" data-i18n="ctaServices">Voir les services</a>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-slides">
+      <img src="images/hero.jpg" alt="Kenny Cleaning" class="active" />
+    </div>
+  </header>
+
+  <!-- HERO (Mobile) -->
+  <header class="hero-mobile">
+    <div class="scroll-banner">
+      <div class="scroll-text" data-i18n="luxLoop">
+        KENNY CLEANING • KENNY CLEANING • KENNY CLEANING • KENNY CLEANING •
+      </div>
+    </div>
+
+    <div class="hero-logo">
+      <span class="logo-script">Kenny Cleaning</span>
+    </div>
+
+    <div class="before-after single">
+      <img src="images/hero.jpg" alt="Kenny Cleaning" />
+    </div>
+
+    <div class="hero-text">
+      <h1 data-i18n="heroHeadline">Nettoyage haut de gamme, résultats impeccables.</h1>
+      <p class="sub" data-i18n="heroSub">Maison, bureaux, Airbnb — un service fiable, rapide et soigné.</p>
+
+      <div class="hero-cta">
+        <a class="btn" href="#booking" data-i18n="ctaBook">Réserver</a>
+        <a class="btn ghost" href="#services" data-i18n="ctaServices">Voir les services</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- WHY CHOOSE US -->
+    <section id="why" class="card">
+      <h2 data-i18n="whyTitle">Pourquoi nous choisir</h2>
+      <p class="muted" data-i18n="whyText">
+        Chez Kenny Cleaning, on ne “fait pas juste le ménage”.
+        On restaure le confort de votre espace avec une méthode précise, des finitions soignées,
+        et un vrai sens du détail. Chaque intervention est réalisée avec sérieux, discrétion et respect —
+        pour un résultat visible dès la première visite.
+      </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="card services">
+      <h2 data-i18n="servicesTitle">Services</h2>
+
+      <ul class="services-list">
+        <li data-i18n="svcHome">Nettoyage à domicile (régulier)</li>
+        <li data-i18n="svcDeep">Grand nettoyage (deep cleaning)</li>
+        <li data-i18n="svcOffice">Nettoyage de bureaux</li>
+        <li data-i18n="svcAirbnb">Airbnb turnover</li>
+        <li data-i18n="svcLaundry">Lessive / repassage</li>
+        <li data-i18n="svcPost">Nettoyage après travaux</li>
+      </ul>
+    </section>
+
+    <!-- BOOKING (WhatsApp) -->
+    <section id="booking" class="card booking">
+      <h2 data-i18n="bookingTitle">Réserver</h2>
+      <p class="muted" data-i18n="bookingSub">
+        Remplissez ce formulaire — il ouvrira WhatsApp avec votre message prêt à envoyer.
+      </p>
+
+      <form id="booking-form" class="form">
+        <input type="text" name="name" data-i18n-placeholder="phName" placeholder="Nom complet" required />
+        <input type="text" name="address" data-i18n-placeholder="phAddress" placeholder="Adresse (ville/zone)" required />
+        <select name="service" required>
+          <option value="Home cleaning" data-i18n="optHome">Nettoyage à domicile (régulier)</option>
+          <option value="Deep cleaning" data-i18n="optDeep">Grand nettoyage</option>
+          <option value="Office cleaning" data-i18n="optOffice">Nettoyage de bureaux</option>
+          <option value="Airbnb turnover" data-i18n="optAirbnb">Airbnb turnover</option>
+          <option value="Laundry / ironing" data-i18n="optLaundry">Lessive / repassage</option>
+          <option value="Post-construction cleaning" data-i18n="optPost">Nettoyage après travaux</option>
+        </select>
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+        <textarea name="message" data-i18n-placeholder="phNotes" placeholder="Détails (surface, pièces, exigences)..."></textarea>
+        <button class="btn" type="submit" data-i18n="ctaWhatsapp">Envoyer sur WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card contact">
+      <h2 data-i18n="contactTitle">Contact</h2>
+
+      <p>
+        WhatsApp: <a href="https://wa.me/33753302385" target="_blank">+33 7 53 30 23 85</a>
+      </p>
+
+      <div style="margin-top:12px;">
+        <a class="btn ghost" href="mailto:Kenny4uk@yahoo.co.uk" data-i18n="ctaEmail">
+          Envoyer un email
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© 2026 Kenny Trendy Enterprises</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
