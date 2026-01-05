@@ -35,6 +35,10 @@ const TEXT = {
     why3Title: "Service sur-mesure",
     why3Text: "Maison, bureaux, Airbnb : on s’adapte à vos besoins, fréquence et priorités.",
 
+    galleryTitle: "Galerie",
+    gallerySub: "Appuyez sur la bulle pour voir les photos.",
+    galleryBubbleLabel: "Galerie",
+
     servicesTitle: "Services",
     servicesSub: "Choisissez le service qui correspond à votre besoin — et réservez en 30 secondes via WhatsApp.",
     svcHome: "Nettoyage à domicile (régulier)",
@@ -62,7 +66,9 @@ const TEXT = {
     contactWhatsappLabel: "WhatsApp",
     contactEmailLabel: "Email",
     ctaEmail: "Envoyer un email",
-  },
+   
+   },
+
 
   en: {
     navAppointment: "Make an appointment",
@@ -94,6 +100,10 @@ const TEXT = {
     why2Text: "Simple communication, on-time arrival, and total respect for your space.",
     why3Title: "Tailored service",
     why3Text: "Home, offices, Airbnb: we adapt to your needs, frequency, and priorities.",
+
+    galleryTitle: "Gallery",
+    gallerySub: "Tap the bubble to view photos.",
+    galleryBubbleLabel: "Gallery",
 
     servicesTitle: "Services",
     servicesSub: "Choose the service that fits your needs — and book in 30 seconds via WhatsApp.",
