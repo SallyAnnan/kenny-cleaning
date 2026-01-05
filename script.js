@@ -257,3 +257,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const GALLERY_IMAGES = [
+  "images/WhatsApp Image 2026-01-04 at 1.20.11 PM.jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.12 PM (1).jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.12 PM (2).jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.12 PM.jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.13 PM.jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.14 PM (1).jpeg",
+  "images/WhatsApp Image 2026-01-04 at 1.20.14 PM.jpeg"
+];
+(function initGallery() {
+  const openGallery = document.getElementById("openGallery");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const prev = document.getElementById("lightbox-prev");
+  const next = document.getElementById("lightbox-next");
+  const close = document.getElementById("lightbox-close");
+
+  if (!openGallery || !lightbox || !lightboxImg) return;
+
+  let idx = 0;
+
+  function show(i) {
+    if (!GALLERY_IMAGES.length) {
+      alert("Add images to GALLERY_IMAGES in script.js");
+      return;
+    }
+    idx = (i + GALLERY_IMAGES.length) % GALLERY_IMAGES.length;
+    lightboxImg.src = GALLERY_IMAGES[idx];
+    lightbox.classList.add("active");
+  }
+
+  openGallery.addEventListener("click", () => show(0));
+
+  if (prev) prev.addEventListener("click", () => show(idx - 1));
+  if (next) next.addEventListener("click", () => show(idx + 1));
+
+  if (close) close.addEventListener("click", () => lightbox.classList.remove("active"));
+
+  // click outside image to close
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.classList.remove("active");
+  });
+
+  // swipe on mobile
+  let startX = 0;
+  lightbox.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+  lightbox.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (endX < startX - 50) show(idx + 1);
+    if (endX > startX + 50) show(idx - 1);
+  });
+})();
