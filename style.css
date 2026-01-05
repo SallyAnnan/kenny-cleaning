@@ -450,3 +450,27 @@ h2{
   .form-row{ grid-template-columns: 1fr; }
   .lang-toggle{ top: 66px; } /* keeps it away from hamburger */
 }
+/* SERVICES: text left + image right (Serenity style) */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+}
+
+.services-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-image {
+    margin-top: 18px;
+  }
+}
